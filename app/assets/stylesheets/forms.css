@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#forms_body {
+  background: #df946cb6;
+}
+
+.signup-form {
+  background-color: white;
+  width: 18%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  border-radius: 100px;
+  height: 36vh;
+  margin-top: 10%;
+}
+
+.login-form {
+  height: 30vh;
+}
+
+.form_head {
+  color: #4d423c;
+  text-align: center;
+}
+
+.name_space {
+  border: none;
+  border-bottom: .5px solid #eb5b02;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn_submit {
+  color: white;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background: #4d423c;
+}
+
+.btn_submit:hover {
+  cursor: pointer;
+  background: #3d342f;
+}
+
+.form_diff_link {
+  color: #eb5b02;
+  text-decoration: none;
+}

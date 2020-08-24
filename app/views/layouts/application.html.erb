@@ -11,7 +11,7 @@
     
   </head>
 
-  <body>
+  <body id="app_body">
     <nav class="nav_bar">
       <h1 class="brand-logo">
         Aburi Blog
@@ -23,9 +23,11 @@
       </ul>
 
       <span class="nav_right">
-        <a href="/login">LOGIN</a> | <a href="/signup">REGISTER</a>
+        <a href="/logout">LOGOUT</a>
       </span>
     </nav>
+    
+    <%= yield %>
 
     <footer>
       <h1 class="brand-logo foot_logo">
@@ -34,9 +36,8 @@
 
       <p class="footer_center">
         <a href="#">Privacy Policy Terms & Conditions</a>
-        <span>Copyright <%= Year.now %>. All rights reserved.</span>
+        <span>Copyright <%= Time.now.year %>. All rights reserved.</span>
       </p>
     </footer>
-    <%= yield %>
   </body>
 </html>
