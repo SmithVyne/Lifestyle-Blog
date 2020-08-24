@@ -1,11 +1,8 @@
-
-<h2 class="">User Login</h2>
-
-
-<form accept-charset="UTF-8" action="/login" data-remote="true" method="post" class="signup-form bg-primary">
+<form accept-charset="UTF-8" action="/login" data-remote="true" method="post" class="signup-form login-form">
   <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
 
-  <label for="name" class="label">Name:</label> <br>
-  <input type="text" name="Name" id="" placeholder="e.g: John"> <br>
-  <button type="submit">Login</button>
+  <h1 class="form_head">User Login</h1>
+  <input type="text" name="name" class="name_space" placeholder="Type your Username">
+  <button type="submit" class="btn_submit">Login</button>
+  <span>Don't have an account? <a href="/signup" class="form_diff_link">Sign up</a></span>
 </form>
