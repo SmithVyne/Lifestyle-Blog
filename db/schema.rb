@@ -10,16 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_21_040326) do
+ActiveRecord::Schema.define(version: 2020_08_24_235410) do
 
   create_table "articles", force: :cascade do |t|
-    t.integer "author_id", null: false
+    t.integer "author_id"
     t.string "title"
     t.text "text"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_articles_on_author_id"
+  end
+
+  create_table "articles_categories", force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "category_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_articles_categories_on_article_id"
+    t.index ["category_id"], name: "index_articles_categories_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "priority"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -29,15 +45,12 @@ ActiveRecord::Schema.define(version: 2020_08_21_040326) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "article_id", null: false
+    t.integer "user_id"
+    t.integer "article_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_votes_on_article_id"
     t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
-  add_foreign_key "articles", "authors"
-  add_foreign_key "votes", "articles"
-  add_foreign_key "votes", "users"
 end

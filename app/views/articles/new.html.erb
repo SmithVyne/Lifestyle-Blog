@@ -1,0 +1,10 @@
+<form accept-charset="UTF-8" action="<%= articles_path %>" data-remote="true" method="post" class="signup-form">
+  <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+
+  <h1 class="form_head">New Article</h1>
+  <input type="text" name="title" class="name_space" placeholder="Title..." id="art_title_space">
+  <textarea name="text" class="name_space" placeholder="Body..." id="art_text_space"></textarea>
+  <input type="file" name="image" class="image_file">
+  
+  <button type="submit" class="btn_submit" id="art_submit">Submit</button>
+</form>
