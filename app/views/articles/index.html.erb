@@ -1,5 +1,7 @@
 <div class="page_header">
   <div class="head_image_div" style="background-image: url(<%= url_for(@max.image)%>)">
+  <%= link_to @max.title, article_path(@max) %>
+    <p><%= @max.text[0, 50] %></p>
   </div>
   <aside class="head_aside">
     <!-- <img src="https://via.placeholder.com/300x300" alt=""> -->
@@ -7,12 +9,5 @@
 </div>
 
 <div class="article_categories">
-  <div class="category category_1">.</div>
-  <div class="category category_2">.</div>
-  <div class="category category_1">.</div>
-  <div class="category category_2">.</div>
-  <div class="category category_2">.</div>
-  <div class="category category_1">.</div>
-  <div class="category category_2">.</div>
-  <div class="category category_1">.</div>
+  <%=  categories? %>
 </div>

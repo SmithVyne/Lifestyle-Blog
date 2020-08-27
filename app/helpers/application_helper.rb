@@ -7,4 +7,10 @@ module ApplicationHelper
       content_tag(:span, "Vote", class: ["badge", "badge-success"])
     end
   end
+
+  def categories?
+    if @categories
+      render 'categories'
+    end
+  end
 end
