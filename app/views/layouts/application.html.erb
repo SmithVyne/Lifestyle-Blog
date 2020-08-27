@@ -5,45 +5,47 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     
   </head>
 
   <body id="app_body">
-    <div class="container">
-      <nav class="nav_bar">
-        <h1 class="brand-logo">
-          Aburi Blog
-        </h1>
+    <nav class="nav_bar">
+      <h1 class="brand-logo">
+        Aburi Blog
+      </h1>
 
-        <ul class="nav_center">
-          <li><a href="/">Home</a></li>
-          <li><a href="<%= new_article_path %>">Write an Article</a></li>
-        </ul>
+      <ul class="nav_center">
+        <li><a href="/">Home</a></li>
+        <li><a href="<%= new_article_path %>">Write an Article</a></li>
+      </ul>
 
-        <span class="nav_right">
-          <a href="/logout">LOGOUT</a>
-        </span>
-      </nav>
+      <span class="nav_right">
+        <a href="/logout">LOGOUT</a>
+      </span>
+    </nav>
 
-      <main>
-        <%= yield %>
-      </main>
+    <main>
+      <%= yield %>
+    </main>
 
-      <footer>
-        <h1 class="brand-logo foot_logo">
-          Aburi Blog
-        </h1>
+    <footer>
+      <h1 class="brand-logo foot_logo">
+        Aburi Blog
+      </h1>
 
-        <p class="footer_center">
-          <a href="#">Privacy Policy Terms & Conditions</a>
-          <span>Copyright <%= Time.now.year %>. All rights reserved.</span>
-        </p>
-      </footer>
-      
-    </div>
-     
+      <p class="footer_center">
+        <a href="#">Privacy Policy Terms & Conditions</a>
+        <span>Copyright <%= Time.now.year %>. All rights reserved.</span>
+      </p>
+    </footer>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>

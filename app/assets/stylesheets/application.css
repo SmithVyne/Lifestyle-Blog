@@ -16,10 +16,17 @@
 
 /* Application Styles */
 
+html {
+  height: 100%;
+}
+
 #app_body {
-  background-color: #4e433d !important;
+  background-color: #eb5b02 !important;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav_bar, footer {
@@ -31,6 +38,7 @@
   background-color: white;
   margin: 0;
   padding: 0;
+  z-index: 100;
 }
 
 .nav_bar {
@@ -75,7 +83,8 @@ nav a {
 }
 
 .head_image_div {
-  background: #a3a367;
+  background: center no-repeat;
+  background-size: cover;
 }
 
 .head_aside {
@@ -123,7 +132,7 @@ footer {
   background: #4e433d;
   color: white;
   grid-template-columns: 1fr 2fr 1fr;
-  bottom: 0;
+  margin-top: auto !important;
 }
 
 .foot_logo {
