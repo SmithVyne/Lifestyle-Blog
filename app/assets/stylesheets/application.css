@@ -21,7 +21,7 @@ html {
 }
 
 #app_body {
-  background-color: #eb5b02 !important;
+  background-color: #4e433d !important;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   min-height: 100%;
@@ -49,6 +49,17 @@ html {
 .brand-logo {
   color: black;
   margin: 0 0 0 15px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 45px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #eb5b02;
+}
+
+.brand-logo span {
+  color: #eb5b02;
 }
 
 ul.nav_center {
@@ -78,13 +89,33 @@ nav a {
   width: 100%;
 }
 
-.head_image_div, .head_aside {
-  border: 1px solid black;
+/* Head Image and Sidebar */
+
+.head_image_div{
+  border-top: 3px solid #eb5b02;
 }
 
 .head_image_div {
   background: center no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.head_inside {
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px;
+}
+
+.head_image_title, .head_image_title:hover {
+  color: #eb5b02;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.head_image_text {
+  color: white;
 }
 
 .head_aside {
@@ -97,12 +128,15 @@ nav a {
   grid-auto-rows: 200px;
 }
 
-.category_1 {
-  background: #DF946C;
+.category {
+  background: center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 0 20px;
 }
 
-.category_2 {
-  background: #99B2DD;
+.category_title, .recent_title {
+  color: white;
 }
 
 /* Write an Article */
@@ -137,6 +171,10 @@ footer {
 
 .foot_logo {
   color: white;
+}
+
+.footer_center {
+  margin: 0;
 }
 
 .footer_center a {

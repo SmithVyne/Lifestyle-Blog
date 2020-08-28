@@ -8,4 +8,8 @@ class Category < ApplicationRecord
 
   validates :priority, presence: true, 
                    :inclusion => {:in => 1..3}
+
+  def recent
+    self.articles.order("created_at DESC")[0]
+  end
 end

@@ -1,7 +1,9 @@
 <div class="page_header">
   <div class="head_image_div" style="background-image: url(<%= url_for(@max.image)%>)">
-  <%= link_to @max.title, article_path(@max) %>
-    <p><%= @max.text[0, 50] %></p>
+    <div class="head_inside">
+      <%= link_to @max.title, article_path(@max), class: ["head_image_title"] %>
+      <p class="head_image_text"><%= truncate(@max.text) %></p>
+    </div>
   </div>
   <aside class="head_aside">
     <!-- <img src="https://via.placeholder.com/300x300" alt=""> -->

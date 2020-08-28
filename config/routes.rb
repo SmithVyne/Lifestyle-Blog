@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :articles
   resources :votes
+  resources :categories
   
   root 'sessions#new'
   get 'login' => 'sessions#new'
