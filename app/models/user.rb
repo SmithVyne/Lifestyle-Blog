@@ -6,6 +6,6 @@ class User < ApplicationRecord
                    length: { maximum: 30 }
 
   def voted?(article)
-    vote = Vote.find_by(user: self, article: article)
+    vote = self.votes.where(article: article)
   end
 end

@@ -9,8 +9,21 @@ module ApplicationHelper
   end
 
   def categories?
-    if @categories
-      render 'categories'
+    render 'categories' if @categories
+  end
+
+  def articles?
+    render 'articles' if @articles
+  end
+
+  def checkboxes(article)
+    control = (@articles.index(article) + 1) % 4
+    a = render 'text', article: article
+    b = render 'image', article: article
+    if control == 0 || control == 3
+      a + b
+    else
+      b + a
     end
   end
 end

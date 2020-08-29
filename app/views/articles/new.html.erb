@@ -1,4 +1,4 @@
-<%= form_with(url: articles_path , method: "post") do |form| %>
+<%= form_with(url: articles_path , method: "post", class: ["signup-form"], id: "new_art_form") do |form| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -10,28 +10,29 @@
       </ul>
     </div>
   <% end %>
-
+  <h1 class="form_head" id="art_head">New Article</h1>
+  
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
+    <%= form.text_field :title, id: ["art_title_space"], placeholder: "Title here", autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.text_area :text, id: ["art_body_space"], placeholder: "Your beautiful writing..." %>
   </div>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select :category, @categories.map { |c| [c.name, c.id] } %>
+  <div class="custom-file">
+    <%= form.file_field :image, id: "art_image_space", class: "custom-file-input", id: "customFile" %>
+    <label class="custom-file-label" for="customFile">Choose file</label>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div id="select-field">
+    <%= form.select :category, @categories.map { |c| [c.name, c.id] }, 
+    {
+      selected: "",
+      disabled: "",
+      prompt: 'Choose a category'
+    }, class: ["custom-select", "custom-select-lg", "mb-3"] %>
   </div>
+
+  <%= form.submit class: "btn_submit" %>
 <% end %>
