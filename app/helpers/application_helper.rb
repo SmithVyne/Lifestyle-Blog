@@ -4,7 +4,7 @@ module ApplicationHelper
     if current_user.voted?(article)
       content_tag(:span, "Voted", class: ["badge", "badge-warning"])
     else
-      content_tag(:span, "Vote", class: ["badge", "badge-success"])
+      link_to "Vote", "/articles/#{article.id }/vote",  class: ["badge", "badge-success"] 
     end
   end
 
@@ -25,5 +25,9 @@ module ApplicationHelper
     else
       b + a
     end
+  end
+
+  def has_articles?(cat)
+    render 'cat_support', category: cat if cat.articles.any?
   end
 end

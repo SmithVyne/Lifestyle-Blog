@@ -4,7 +4,7 @@ class VotesController < ApplicationController
     @article = Article.find(params[:id])
     @vote = current_user.votes.create(article_id: @article.id)
     if @vote
-      redirect_to @article
+      redirect_to articles_path
     end
   end
 end

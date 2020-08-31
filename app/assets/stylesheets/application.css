@@ -119,7 +119,7 @@ nav a {
 }
 
 .head_aside {
-  background: #000;
+  /* background: #000; */
 }
 
 .article_categories {
@@ -225,8 +225,16 @@ footer {
 .cat_article {
   background: white;
   color: black;
+  padding: 20px;
 }
 
 .art_img {
   content: "";
+}
+
+.art_title {
+ color: #fc9d01;
+ border-bottom: 2px solid #fc9d01;
+ width: fit-content;
+ font-weight: bold;
 }
