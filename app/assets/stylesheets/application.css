@@ -238,3 +238,29 @@ footer {
  width: fit-content;
  font-weight: bold;
 }
+
+/* New Category */
+
+.priority_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.cat_priority {
+  width: 15px;
+  height: 15px;
+  border-radius: none;
+}
+
+#priority_2 {
+  width: 20px;
+  height: 20px;
+}
+
+#priority_3 {
+  width: 25px;
+  height: 25px;
+}
+
