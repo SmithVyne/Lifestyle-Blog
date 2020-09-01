@@ -17,11 +17,11 @@ I created a lifestyle blog where users can:
 5. Create new categories
 
 
-I created a has_many belongs_to relationship between users and articles
-I also created relationships between articles and their categories
-To create votes, I created a join relationship. So votes belong to users and articles.
-I setup the layout of the app, using the given design.
-I laid-out the basic MVP. Focusing on getting the app to work first.
+- I created a has_many belongs_to relationship between users and articles
+- I also created relationships between articles and their categories
+- To create votes, I created a join relationship. So votes belong to users and articles.
+- I setup the layout of the app, using the given design.
+- I laid-out the basic MVP. Focusing on getting the app to work first.
 
 ## Authors
 
