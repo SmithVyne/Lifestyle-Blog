@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :articles, except: [:edit, :update, :destroy]
   resources :votes, only: [:create]
-  resources :categories, only: [:show, :create]
+  resources :categories, only: [:new, :show, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
   root 'sessions#new'
