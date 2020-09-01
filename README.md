@@ -1,5 +1,6 @@
 # Lifestyle-Blog
-Built-with: Ruby on Rails
+- Ruby v2.7.1
+- Ruby on Rails
 
 # Set-Up instructions
 * Setup Ruby and Ruby-on-Rails on your computer
@@ -22,6 +23,11 @@ I created a lifestyle blog where users can:
 - To create votes, I created a join relationship. So votes belong to users and articles.
 - I set up the layout of the app, using the given design.
 - I laid out the basic MVP. Focusing on getting the app to work first.
+
+
+## Live Demo
+
+[Link to Demo](https://fast-wave-49614.herokuapp.com/)
 
 ## Authors
 
