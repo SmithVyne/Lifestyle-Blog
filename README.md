@@ -1,24 +1,36 @@
-# README
+# Lifestyle-Blog
+Built-with: Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Set-Up instructions
+* Setup Ruby and Ruby-on-Rails on your computer
+* Clone this repository by running `https://github.com/SmithVyne/Lifestyle-Blog.git` and cd into the directory
+* Run `bundle install` to install the necessary ruby gems
+* Run `rails server` to start-up the application and visit `localhost:3000` in your browser to access it.
 
-Things you may want to cover:
 
-* Ruby version
+I created a lifestyle blog where users can:
 
-* System dependencies
+1. Create an account
+2. Write articles with image headers
+3. Vote on different articles. Both of the same user or a different user.
+4. Add articles to different categories
+5. Create new categories
 
-* Configuration
 
-* Database creation
+I created a has_many belongs_to relationship between users and articles
+I also created relationships between articles and their categories
+To create votes, I created a join relationship. So votes belong to users and articles.
+I setup the layout of the app, using the given design.
+I laid-out the basic MVP. Focusing on getting the app to work first.
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+👤 **Smith Nkereuwem**
 
-* Services (job queues, cache servers, search engines, etc.)
+- Github: [@SmithVyne](https://github.com/SmithVyne)
+- Twitter: [@SmithVyne](https://twitter.com/SmithVyne)
+- Email: [email me](smithnkereuwem2@gmail.com)
 
-* Deployment instructions
+## Show your support
 
-* ...
+Give a ⭐️ if you like this project!
