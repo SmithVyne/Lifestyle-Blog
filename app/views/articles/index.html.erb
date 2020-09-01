@@ -1,9 +1,6 @@
 <div class="page_header">
-  <div class="head_image_div" style="background-image: url(<%= url_for(@max.image)%>)">
-    <div class="head_inside">
-      <%= link_to @max.title, article_path(@max), class: ["head_image_title"] %>
-      <p class="head_image_text"><%= truncate(@max.text) %></p>
-    </div>
+  <div class="head_image_div" style= "background-image: url(<%= votesnotnil %>)" >
+    <%= renderhead %>
   </div>
   <aside class="head_aside">
     

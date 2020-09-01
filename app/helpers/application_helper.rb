@@ -29,11 +29,4 @@ module ApplicationHelper
   def hasarticles?(cat)
     render 'cat_support', category: cat if cat.articles.any?
   end
-
-  def votesnotnill
-    if Vote.most_voted
-      max_url = image_path(@max.image) 
-      "background-image: url(#{max_url})"
-    end
-  end
 end
