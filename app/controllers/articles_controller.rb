@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-
   def index
     @max = Vote.most_voted
     @categories = Category.all

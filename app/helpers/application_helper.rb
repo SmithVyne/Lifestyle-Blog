@@ -1,10 +1,9 @@
 module ApplicationHelper
-
   def vote_button(article)
     if current_user.voted?(article)
-      content_tag(:span, "Voted", class: ["badge", "badge-warning"])
+      content_tag(:span, 'Voted', class: %w[badge badge-warning])
     else
-      link_to "Vote", "/articles/#{article.id }/vote",  class: ["badge", "badge-success"] 
+      link_to 'Vote', "/articles/#{article.id}/vote", class: %w[badge badge-success]
     end
   end
 

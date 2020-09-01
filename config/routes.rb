@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :articles
   resources :votes
   resources :categories
-  
+
   root 'sessions#new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
@@ -13,5 +13,4 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
-
 end

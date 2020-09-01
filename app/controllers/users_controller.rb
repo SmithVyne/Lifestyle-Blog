@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = ['Sucessfully Signed Up']
-      redirect_to @user
+      redirect_to articles_path
     else
       flash[:errors] = @user.errors.full_messages
       render :new
