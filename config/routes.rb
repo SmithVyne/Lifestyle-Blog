@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :users
-  resources :articles
-  resources :votes
-  resources :categories
+  resources :users, only: [:new, :create]
+  resources :articles, except: [:edit, :update, :destroy]
+  resources :votes, only: [:create]
+  resources :categories, only: [:show, :create]
+  resources :sessions, only: [:new, :create, :destroy]
 
   root 'sessions#new'
   get 'login' => 'sessions#new'
