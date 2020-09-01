@@ -16,7 +16,6 @@
 
 #forms_body {
   background: #3d342f;
-  /* background: #df946cb6; */
 }
 
 .signup-form {
@@ -43,7 +42,7 @@
 
 .name_space {
   border: none;
-  border-bottom: .5px solid #eb5b02;
+  border-bottom: 0.5px solid #eb5b02;
   width: 100%;
   text-align: center;
   margin-top: 20px;

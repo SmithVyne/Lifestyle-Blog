@@ -19,14 +19,14 @@ module ApplicationHelper
     control = (@articles.index(article) + 1) % 4
     a = render 'text', article: article
     b = render 'image', article: article
-    if control == 0 || control == 3
+    if control.zero? || control == 3
       a + b
     else
       b + a
     end
   end
 
-  def has_articles?(cat)
+  def hasarticles?(cat)
     render 'cat_support', category: cat if cat.articles.any?
   end
 end

@@ -6,6 +6,6 @@ class User < ApplicationRecord
                    length: { maximum: 30 }
 
   def voted?(article)
-    vote = votes.find_by(article: article)
+    votes.find_by(article: article)
   end
 end

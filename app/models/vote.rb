@@ -4,6 +4,6 @@ class Vote < ApplicationRecord
 
   def self.most_voted
     articles = group(:article).count
-    max = articles.max_by { |_k, v| v }[0]
+    articles.max_by { |_k, v| v }[0]
   end
 end
