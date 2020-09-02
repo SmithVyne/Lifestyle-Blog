@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.create(article_params)
     @artcat = @article.articles_categories.build(cat_params)
     if @article && @artcat.save
-      flash[:success] = ["Article successfully created"]
+      flash[:success] = ['Article successfully created']
       redirect_to @article
     else
       flash[:errors] = @article.errors.full_messages

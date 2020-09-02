@@ -2,13 +2,13 @@ module ApplicationHelper
   def notices?
     if flash[:success]
       notices = flash[:success]
-      render 'layouts/notices', notices: notices, design: "success"
+      render 'layouts/notices', notices: notices, design: 'success'
     elsif flash[:errors]
       notices = flash[:errors]
-      render 'layouts/notices', notices: notices, design: "danger"
+      render 'layouts/notices', notices: notices, design: 'danger'
     end
   end
-  
+
   def vote_button(article)
     if current_user.voted?(article)
       content_tag(:span, 'Voted', class: %w[badge badge-warning])

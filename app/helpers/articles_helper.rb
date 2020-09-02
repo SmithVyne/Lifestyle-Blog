@@ -8,11 +8,11 @@ module ArticlesHelper
   end
 
   def optionfields(form)
-    form.select :category_id, @categories.map { |c| [c.name, c.id] }, 
-    {
-      selected: "",
-      disabled: "",
-      prompt: 'Choose a category'
-    }, class: ["custom-select", "custom-select-lg", "mb-3"]
+    form.select :category_id, @categories.map { |c| [c.name, c.id] },
+                {
+                  selected: '',
+                  disabled: '',
+                  prompt: 'Choose a category'
+                }, class: %w[custom-select custom-select-lg mb-3]
   end
 end

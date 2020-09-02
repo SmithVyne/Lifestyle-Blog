@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: %i[new create]
   def new
     if current_user
       redirect_to articles_path
@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
   end
 
   private
-  
+
   def session_params
     params.permit(:name)
   end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: %i[new create]
   def new
     @user = User.new
     render :new, layout: 'forms'
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def user_params
     params.permit(:name)

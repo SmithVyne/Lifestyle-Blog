@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     @user = User.find_by_id(session[:user_id]) unless session[:user_id].nil?
   end
 
-  def truncate(text, num=nil)
+  def truncate(text, num = nil)
     if num
       text[0, num] + '....'
     else
@@ -17,9 +17,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    unless current_user
-      flash[:error] = "You must be logged in to access this section"
-      redirect_to login_path
-    end
+    return if current_user
+
+    flash[:error] = 'You must be logged in to access this section'
+    redirect_to login_path
   end
 end
