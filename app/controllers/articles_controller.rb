@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @max = Vote.most_voted
-    @categories = Category.all
+    @categories = Category.all.order('priority DESC')
   end
 
   def new
