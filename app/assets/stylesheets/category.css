@@ -35,6 +35,7 @@
 .cat_priority {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 #priority_2 {
