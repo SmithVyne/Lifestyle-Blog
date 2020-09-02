@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by(session_params)
     if @user
       session[:user_id] = @user.id
       flash[:success] = ['You are sucessfully logged in']
@@ -23,5 +23,11 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to login_path
+  end
+
+  private
+  
+  def session_params
+    params.permit(:name)
   end
 end

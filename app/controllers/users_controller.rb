@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name])
+    @user = User.new(user_params)
 
     if @user.save
       session[:user_id] = @user.id
@@ -16,5 +16,11 @@ class UsersController < ApplicationController
       flash[:errors] = @user.errors.full_messages
       render :new
     end
+  end
+
+  private 
+
+  def user_params
+    params.permit(:name)
   end
 end

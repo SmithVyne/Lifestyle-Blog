@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
       redirect_to articles_path
     else
       flash[:errors] = @category.errors.full_messages
-      render :new
+      redirect_to new_category_path
     end
   end
 
