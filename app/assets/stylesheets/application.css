@@ -117,5 +117,8 @@ footer {
   border-radius: 50%;
   color: #4e433d;
   text-decoration: none;
-  font-weight: bold;
+}
+
+.footer_right i {
+  font-weight: bolder;
 }

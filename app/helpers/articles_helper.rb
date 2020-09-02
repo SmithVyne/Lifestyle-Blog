@@ -8,7 +8,7 @@ module ArticlesHelper
   end
 
   def optionfields(form)
-    form.select :category, @categories.map { |c| [c.name, c.id] }, 
+    form.select :category_id, @categories.map { |c| [c.name, c.id] }, 
     {
       selected: "",
       disabled: "",

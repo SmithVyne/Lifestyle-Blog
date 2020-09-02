@@ -10,9 +10,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.build(article_params)
-    if @article.save
-      ArticlesCategory.create(article: @article, category_id: params[:category])
+    @article = current_user.articles.create(article_params)
+    @artcat = @article.articles_categories.build(cat_params)
+    if @article && @artcat.save
       flash[:success] = ["Article successfully created"]
       redirect_to @article
     else
@@ -29,5 +29,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.permit(:title, :text, :image)
+  end
+
+  def cat_params
+    params.permit(:category_id)
   end
 end
