@@ -5,8 +5,20 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.create(name: params[:name], priority: params[:priority])
+    @category = Category.new(category_params)
 
-    redirect_to articles_path if @category
+    if @category.save
+      flash[:success] = "#{@category.name} category created"
+      redirect_to articles_path
+    else
+      flash[:errors] = @category.errors.full_messages
+      render :new
+    end
+  end
+
+  private
+
+  def category_params
+    params.permit(:name, :priority)
   end
 end

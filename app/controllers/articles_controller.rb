@@ -10,11 +10,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.create(article_params)
-    if @article
-      ArticlesCategory.create(article_id: @article.id, category_id: params[:category])
+    @article = current_user.articles.build(article_params)
+    if @article.save
+      ArticlesCategory.create(article: @article, category_id: params[:category])
+      flash[:success] = "Article successfully created"
       redirect_to @article
     else
+      flash[:errors] = @article.errors.full_messages
       render :new
     end
   end

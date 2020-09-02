@@ -3,7 +3,9 @@ class Vote < ApplicationRecord
   belongs_to :article
 
   def self.most_voted
-    articles = group(:article).count
-    articles.max_by { |_k, v| v }[0]
+    if any?
+      articles = group(:article).count
+      articles.max_by { |_k, v| v }[0]
+    end
   end
 end
