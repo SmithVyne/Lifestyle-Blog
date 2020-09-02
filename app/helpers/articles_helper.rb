@@ -6,4 +6,13 @@ module ArticlesHelper
   def renderhead
     render 'head_inside' if @max
   end
+
+  def optionfields(form)
+    form.select :category, @categories.map { |c| [c.name, c.id] }, 
+    {
+      selected: "",
+      disabled: "",
+      prompt: 'Choose a category'
+    }, class: ["custom-select", "custom-select-lg", "mb-3"]
+  end
 end

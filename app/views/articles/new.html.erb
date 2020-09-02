@@ -15,12 +15,7 @@
   </div>
 
   <div id="select-field">
-    <%= form.select :category, @categories.map { |c| [c.name, c.id] }, 
-    {
-      selected: "",
-      disabled: "",
-      prompt: 'Choose a category'
-    }, class: ["custom-select", "custom-select-lg", "mb-3"] %>
+    <%= optionfields(form) %>
   </div>
 
   <%= form.submit class: "btn_submit" %>
