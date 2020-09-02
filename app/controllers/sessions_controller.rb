@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
     @user = User.find_by(session_params)
     if @user
       session[:user_id] = @user.id
-      flash[:success] = ['You are sucessfully logged in']
       redirect_to articles_path
     else
       flash[:errors] = ['Wrong login, user does not exist']
