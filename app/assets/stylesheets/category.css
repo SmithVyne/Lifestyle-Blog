@@ -1,0 +1,53 @@
+/* Show Categories */
+
+.cat_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 400px;
+}
+
+.cat_article {
+  background: white;
+  color: black;
+  padding: 20px;
+}
+
+.art_img {
+  content: "";
+}
+
+.art_title {
+  color: #fc9d01;
+  border-bottom: 2px solid #fc9d01;
+  width: fit-content;
+  font-weight: bold;
+}
+
+/* New Category */
+
+.priority_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.cat_priority {
+  width: 15px;
+  height: 15px;
+}
+
+#priority_2 {
+  width: 20px;
+  height: 20px;
+}
+
+#priority_3 {
+  width: 25px;
+  height: 25px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #eb5b02;
+}

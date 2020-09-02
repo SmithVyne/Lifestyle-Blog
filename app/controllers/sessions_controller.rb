@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: [:new, :create]
   def new
     if current_user
       redirect_to articles_path
@@ -14,7 +15,7 @@ class SessionsController < ApplicationController
       flash[:success] = ['You are sucessfully logged in']
       redirect_to articles_path
     else
-      flash[:errors] = ['Wrong login']
+      flash[:errors] = ['Wrong login, user does not exist']
       redirect_to login_path
     end
   end

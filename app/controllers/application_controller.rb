@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :require_login
   helper_method :current_user, :truncate
 
   private
@@ -12,6 +13,13 @@ class ApplicationController < ActionController::Base
       text[0, num] + '....'
     else
       text[0, 50] + '....'
+    end
+  end
+
+  def require_login
+    unless current_user
+      flash[:error] = "You must be logged in to access this section"
+      redirect_to login_path
     end
   end
 end
