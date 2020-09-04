@@ -8,4 +8,6 @@ class Vote < ApplicationRecord
     articles = group(:article).count
     articles.max_by { |_k, v| v }[0]
   end
+
+  validates :user_id, uniqueness: { scope: :article_id }
 end
