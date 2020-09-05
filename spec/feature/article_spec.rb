@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature Article, type: :feature do
-  let!(:user) { User.create( name: 'juxoe' ) }
+  let!(:user) { User.create(name: 'juxoe') }
   def log_in(user)
     visit new_session_path
     fill_in 'name', with: user.name
@@ -9,7 +9,7 @@ RSpec.feature Article, type: :feature do
   end
 
   describe 'creating a new article' do
-    let!(:category) { Category.create(name: "Modern art", priority: 2) }
+    let!(:category) { Category.create(name: 'Modern art', priority: 2) }
 
     it 'should pass' do
       log_in(user)
@@ -43,7 +43,5 @@ RSpec.feature Article, type: :feature do
       click_on 'Save'
       expect(page).to have_content 'Title can\'t be blank'
     end
-
-    
   end
 end

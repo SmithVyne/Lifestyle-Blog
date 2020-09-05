@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature User, type: :feature do
-  let!(:user) { User.create( name: 'juxoe' ) }
+  let!(:user) { User.create(name: 'juxoe') }
   def log_in(user)
     visit new_session_path
     fill_in 'name', with: user.name
@@ -30,7 +30,6 @@ RSpec.feature User, type: :feature do
   end
 
   describe 'Creating a new user' do
-
     it 'should pass' do
       visit new_user_path
       fill_in 'name', with: 'West Smith'

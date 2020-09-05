@@ -10,7 +10,7 @@ RSpec.describe Article, type: :model do
 
   context 'Validations' do
     let(:user) { User.create(name: 'joue') }
-    let(:article) { user.articles.build(title: "Test Title", text: "This is a new test article") }
+    let(:article) { user.articles.build(title: 'Test Title', text: 'This is a new test article') }
 
     it 'invalid without an image' do
       expect(article).to_not be_valid

@@ -8,8 +8,8 @@ RSpec.describe Category, type: :feature do
   end
 
   describe 'creating a category' do
-    let(:user) { User.create( name: 'Smith' ) }
-    let(:name) { "Modern art" }
+    let(:user) { User.create(name: 'Smith') }
+    let(:name) { 'Modern art' }
 
     it 'validates entries' do
       log_in(user)

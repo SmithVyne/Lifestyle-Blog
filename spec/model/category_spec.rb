@@ -7,7 +7,7 @@ RSpec.describe Category, type: :model do
   end
 
   context 'Validations' do
-    let(:category) { Category.new(name: "Modern Art", priority: 2) }
+    let(:category) { Category.new(name: 'Modern Art', priority: 2) }
 
     it 'invalid without a name' do
       category.name = nil
