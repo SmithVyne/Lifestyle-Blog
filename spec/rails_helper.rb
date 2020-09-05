@@ -63,6 +63,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   Capybara.default_driver = :selenium_chrome
+  Capybara.ignore_hidden_elements = false
 end
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
