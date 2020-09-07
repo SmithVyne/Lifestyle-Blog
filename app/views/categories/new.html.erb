@@ -1,0 +1,16 @@
+<%= form_with(url: categories_path , method: "post", class: ["signup-form"], id: "new_art_form") do |form| %>
+  <h1 class="form_head" id="art_head">Create a new Category</h1>
+  
+  <div class="field">
+    <%= form.text_field :name, id: ["art_title_space"], placeholder: "Name", autocomplete: "off" %>
+  </div>
+
+  <label class="" for="">Select Priority</label> 
+  <div class="priority_field">
+    <input type="radio" class="cat_priority" id="priority_1" name="priority" value="1">
+    <input type="radio" class="cat_priority" id="priority_2" name="priority" value="2">
+    <input type="radio" class="cat_priority" id="priority_3" name="priority" value="3">
+  </div>
+
+  <%= form.submit class: "btn_submit" %>
+<% end %>

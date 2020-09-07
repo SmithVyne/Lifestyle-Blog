@@ -14,61 +14,111 @@
  *= require_self
  */
 
-  body {
-    background: #df946cb6;
-  }
+/* Application Styles */
 
-.signup-form {
-  background-color: white;
-  width: 18%;
-  margin: auto;
+html {
+  height: 100%;
+}
+
+#app_body {
+  background-color: #4e433d !important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+}
+
+.nav_bar,
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 66px;
   align-items: center;
-  border-radius: 100px;
-  height: 36vh;
-  margin-top: 10%;
-}
-
-.login-form {
-  height: 30vh;
-}
-
-.form_head {
-  color: #4d423c;
-  text-align: center;
-}
-
-.name_space {
-  border: none;
-  border-bottom: .5px solid #eb5b02;
   width: 100%;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.btn_submit {
-  color: white;
-  width: 100%;
-  margin: auto;
-  margin-top: 20px;
-  height: 30px;
-  border-radius: 15px;
-  border: none;
-  background: #4d423c;
-}
-
-.btn_submit:hover {
-  cursor: pointer;
-  background: #3d342f;
-}
-
-.form_diff_link {
-  color: #eb5b02;
-  text-decoration: none;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
 }
 
 .nav_bar {
-  display: grid;
+  position: sticky;
+  top: 0;
+}
+
+.brand-logo {
+  color: black;
+  margin: 0 0 0 15px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 45px;
+}
+
+.brand-logo span {
+  color: #eb5b02;
+}
+
+ul.nav_center {
+  display: flex;
+  column-gap: 30px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav_right {
+  justify-self: end;
+  margin-right: 15px;
+}
+
+nav a {
+  color: #8e8a86;
+  text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+  grid-auto-rows: 50px;
+  background: #4e433d;
+  color: white;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin-top: auto !important;
+  border-top: 1px solid white;
+}
+
+.foot_logo {
+  color: white;
+}
+
+.footer_center {
+  margin: 0;
+}
+
+.footer_center a {
+  text-decoration: none;
+  color: orangered;
+}
+
+.footer_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.footer_right a {
+  background: orangered;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #4e433d;
+  text-decoration: none;
+}
+
+.footer_right i {
+  font-weight: bolder;
 }
