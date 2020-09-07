@@ -5,38 +5,59 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://kit.fontawesome.com/7f479a55bc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     
   </head>
 
-  <body>
+  <body id="app_body">
     <nav class="nav_bar">
-      <h1 class="brand-logo">
-        Aburi Blog
-      </h1>
+      <a href="/" class="brand-logo">
+        aBu<span>Ri<span>
+      </a>
 
       <ul class="nav_center">
         <li><a href="/">Home</a></li>
         <li><a href="<%= new_article_path %>">Write an Article</a></li>
+        <li><a href="<%= new_category_path %>">Create a Category</a></li>
       </ul>
 
       <span class="nav_right">
-        <a href="/login">LOGIN</a> | <a href="/signup">REGISTER</a>
+        <a href="/logout">LOGOUT</a>
       </span>
     </nav>
 
+    <%= notices? %>
+
+    <main>
+      <%= yield %>
+    </main>
+
     <footer>
       <h1 class="brand-logo foot_logo">
-        Aburi Blog
+      aBu<span>Ri<span>
       </h1>
 
       <p class="footer_center">
         <a href="#">Privacy Policy Terms & Conditions</a>
-        <span>Copyright <%= Year.now %>. All rights reserved.</span>
+        <span>Copyright <%= Time.now.year %>. All rights reserved.</span>
+      </p>
+
+      <p class="footer_right">
+        Connect with us: 
+        <a href="/"><i class="fab fa-twitter"></i></a>
+        <a href="/"><i class="fab fa-instagram"></i></a>
+        <a href="/"><i class="fab fa-facebook-f"></i></a>
       </p>
     </footer>
-    <%= yield %>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,0 +1,22 @@
+<%= form_with(url: articles_path , method: "post", class: ["signup-form"], id: "new_art_form") do |form| %>
+  <h1 class="form_head" id="art_head">New Article</h1>
+  
+  <div class="field">
+    <%= form.text_field :title, id: ["art_title_space"], placeholder: "Title here", autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :text, id: ["art_body_space"], placeholder: "Your beautiful writing..." %>
+  </div>
+
+  <div class="custom-file">
+    <%= form.file_field :image, id: "art_image_space", class: "custom-file-input", id: "customFile" %>
+    <label class="custom-file-label" for="customFile">Choose file</label>
+  </div>
+
+  <div id="select-field">
+    <%= optionfields(form) %>
+  </div>
+
+  <%= form.submit class: "btn_submit" %>
+<% end %>
