@@ -27,7 +27,7 @@ I created a lifestyle blog where users can:
 
 ## Live Demo
 
-[Link to Demo](https://fast-wave-49614.herokuapp.com/)
+[Link to Demo](https://lifestyleblog.herokuapp.com/)
 
 ## Authors
 
